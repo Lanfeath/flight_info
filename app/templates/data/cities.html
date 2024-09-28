@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title">
+        <h1>{% block title %} The Cities Page {% endblock %}</h1>
+        <a href="{{ url_for('data.index') }}">Retour</a>
+    </span>
+    <div class="content">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nom de la ville</th>
+                    <th>Code ville IATA</th>
+                    <th>Code Pays ISO 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for city in cities %}
+                    <tr>
+                        <td>{{ city.id }}</td>
+                        <td>{{ city.name }}</td>
+                        <td>{{ city.iata_code }}</td>
+                        <td>{{ city.country_iso2 }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

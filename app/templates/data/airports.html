@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title">
+        <h1>{% block title %} The Airports Page {% endblock %}</h1>
+        <a href="{{ url_for('data.index') }}">Retour</a>
+    </span>
+
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nom de l'aéroport</th>
+                    <th>Pays d'appartenance</th>
+                    <th>Code ville</th>
+                    <th>Code IATA</th>
+                    <th>Code ICAO</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for airport in airports %}
+                    <tr>
+                        <td>{{ airport.id }}</td>
+                        <td>{{ airport.name }}</td>
+                        <td>{{ airport.country_name }}</td>
+                        <td>{{ airport.city_iata_code }}</td>
+                        <td>{{ airport.iata_code }}</td>
+                        <td>{{ airport.icao_code }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

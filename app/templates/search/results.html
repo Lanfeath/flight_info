@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title">
+        <h1>{% block title %} The Countries results Page {% endblock %}</h1>
+        <a href="{{ url_for('search.index') }}">Retour</a>
+    </span>
+    <div class="content">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nom du pays</th>
+                    <th>Code ISO 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for country in countries %}
+                    <tr>
+                        <td>{{ country.id }}</td>
+                        <td>{{ country.name }}</td>
+                        <td>{{ country.iso2 }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

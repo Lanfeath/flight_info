@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Résultats de la Recherche de Vols</h1>
+
+    <button class="btn-filter">Appliquer des filtres</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Compagnie Aérienne</th>
+                <th>Ville de Départ</th>
+                <th>Destination</th>
+                <th>Heure de Départ</th>
+                <th>Heure d'Arrivée</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Air France</td>
+                <td>Paris (CDG)</td>
+                <td>New York (JFK)</td>
+                <td>08:00</td>
+                <td>11:00</td>
+                <td>450 €</td>
+            </tr>
+            <tr>
+                <td>EasyJet</td>
+                <td>Lyon (LYS)</td>
+                <td>Londres (LHR)</td>
+                <td>09:30</td>
+                <td>10:30</td>
+                <td>120 €</td>
+            </tr>
+            <tr>
+                <td>Ryanair</td>
+                <td>Marseille (MRS)</td>
+                <td>Madrid (MAD)</td>
+                <td>14:00</td>
+                <td>15:30</td>
+                <td>80 €</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

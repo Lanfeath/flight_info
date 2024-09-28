@@ -89,3 +89,57 @@ tr:hover {
 .center {
     text-align: center;
 }
+
+/* Navbar styles */
+.navbar {
+    background-color: #007bff; /* Bleu principal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre sous la navbar */
+    border-bottom: 3px solid #0056b3; /* Bordure pour plus de contraste */
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    color: #ffdd57; /* Effet de survol sur la marque */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffdd57; /* Changement de couleur au survol */
+}
+
+.navbar-toggler {
+    border: none; /* Supprimer la bordure */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.7%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* Icône burger blanche */
+}
+
+.navbar-light .navbar-toggler-icon {
+    filter: invert(1); /* Inverser la couleur de l'icône sur fond clair */
+}
+
+/* Pour une meilleure présentation sur mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background-color: #007bff;
+        padding: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.8rem;
+        text-align: center;
+    }
+}

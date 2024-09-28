@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Résultat des data disponibles sur: AviationStack</h1>
+   
+        <ul>
+            <li>
+                <a href="{{ url_for('data.airports') }}">Liste des aéroports</a>
+            </li>
+            <li>
+                <a href="{{ url_for('data.cities') }}">Liste des villes</a>
+            </li>
+            <li>
+                <a href="{{ url_for('data.countries') }}">Liste des pays</a>
+            </li>
+        </ul>
+  
+
+
+{% endblock %}
